@@ -1,6 +1,7 @@
-from flask import Flask, render_template, redirect, url_for, request
+from flask import Flask, render_template, redirect, url_for, request, session
 
 app = Flask(__name__)
+app.secret_key = 'supersecretkey'  # Needed for session management
 
 # Sample product data
 products = [
@@ -19,13 +20,9 @@ products = [
 def home():
     return render_template('home.html')
 
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        return redirect(url_for('marketplace'))
-    return render_template('login.html')
+@app.route('/connect_wallet', methods=['GET', 'POST'])
+def connect_wallet():
+    return render_template('connect_wallet.html')
 
 @app.route('/marketplace')
 def marketplace():
@@ -38,7 +35,36 @@ def product_detail(product_id):
         return redirect(url_for('marketplace'))
     return render_template('product_detail.html', product=product)
 
+@app.route('/profile')
+def profile():
+    profile_data = session.get('profile', {'name': '', 'email': '', 'address': ''})
+    purchases = session.get('purchases', [])
+    return render_template('profile.html', profile=profile_data, purchases=purchases)
+
+@app.route('/profile/edit', methods=['GET', 'POST'])
+def profile_edit():
+    if request.method == 'POST':
+        profile_data = {
+            'name': request.form['name'],
+            'email': request.form['email'],
+            'address': request.form['address']
+        }
+        session['profile'] = profile_data
+        return redirect(url_for('profile'))
+    profile_data = session.get('profile', {'name': '', 'email': '', 'address': ''})
+    return render_template('profile_edit.html', profile=profile_data)
+
+@app.route('/buy/<int:product_id>', methods=['POST'])
+def buy_product(product_id):
+    product = next((p for p in products if p['id'] == product_id), None)
+    if product:
+        purchases = session.get('purchases', [])
+        purchases.append(product)
+        session['purchases'] = purchases
+    return redirect(url_for('profile'))
+
 if __name__ == '__main__':
     import os
     os.environ["FLASK_RUN_RELOADER"] = "stat"
     app.run(debug=True)
+

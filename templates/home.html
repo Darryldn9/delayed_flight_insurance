@@ -16,7 +16,7 @@
                     <a class="nav-link" href="{{ url_for('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+                    <a class="nav-link" href="{{ url_for('connect_wallet') }}">Connect Wallet</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('marketplace') }}">Marketplace</a>
@@ -25,12 +25,10 @@
         </div>
     </nav>
     <div class="container mt-5">
-        <div class="jumbotron text-center">
-            <h1 class="display-4">Welcome to Delayed Flight Insurance</h1>
-            <p class="lead">Protect your travels with our comprehensive flight delay insurance policies.</p>
-            <hr class="my-4">
-            <p>Sign in to purchase insurance or browse our marketplace for more options.</p>
-            <a class="btn btn-primary btn-lg" href="{{ url_for('login') }}" role="button">Login</a>
+        <h1 class="text-center">Welcome to Delayed Flight Insurance</h1>
+        <p class="text-center">Get compensated for your delayed flights easily and quickly with blockchain technology.</p>
+        <div class="text-center mt-4">
+            <a href="{{ url_for('connect_wallet') }}" class="btn btn-primary btn-lg">Connect Wallet</a>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
