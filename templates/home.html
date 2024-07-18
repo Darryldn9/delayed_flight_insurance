@@ -77,7 +77,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="User 1">
+                        <img src="{{ url_for('static', filename='images/testimonial1.png') }}" class="card-img-top" alt="User 1">
                         <div class="card-body">
                             <h5 class="card-title">Jane Doe</h5>
                             <p class="card-text">"This service saved me a lot of hassle and money. Highly recommend!"</p>
@@ -86,7 +86,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="User 2">
+                        <img src="{{ url_for('static', filename='images/testimonial2.png') }}" class="card-img-top" alt="User 2">
                         <div class="card-body">
                             <h5 class="card-title">John Smith</h5>
                             <p class="card-text">"Amazing experience! The insurance payout was quick and easy."</p>
@@ -95,7 +95,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="User 3">
+                        <img src="{{ url_for('static', filename='images/testimonial3.png') }}" class="card-img-top" alt="User 3">
                         <div class="card-body">
                             <h5 class="card-title">Emily Johnson</h5>
                             <p class="card-text">"Great customer service and a very convenient platform."</p>
@@ -113,36 +113,45 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Team Member 1">
+                        <img src="{{ url_for('static', filename='images/dar.jpg') }}" class="card-img-top" alt="Team Member 1">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Alice Brown</h5>
+                            <h5 class="card-title">Darryl Nyamayaro</h5>
                             <p class="card-text">CEO</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Team Member 2">
+                        <img src="{{ url_for('static', filename='images/eren.jpg') }}" class="card-img-top" alt="Team Member 2">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Bob White</h5>
+                            <h5 class="card-title">Eren Tomak</h5>
                             <p class="card-text">CTO</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Team Member 3">
+                        <img src="{{ url_for('static', filename='images/mauro.jpg') }}" class="card-img-top" alt="Team Member 3">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Charlie Green</h5>
+                            <h5 class="card-title">Mauro Dunki</h5>
                             <p class="card-text">COO</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Team Member 4">
+                        <img src="{{ url_for('static', filename='images/mik.jpg') }}" class="card-img-top" alt="Team Member 4">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Daisy Blue</h5>
+                            <h5 class="card-title">Mikhail Filippov</h5>
+                            <p class="card-text">CFO</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='images/su.jpg') }}" class="card-img-top" alt="Team Member 5">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Sulagsaan Jeyekumar</h5>
                             <p class="card-text">CFO</p>
                         </div>
                     </div>
@@ -157,16 +166,16 @@
             <h2 class="text-center">Our Industry Partners</h2>
             <div class="row text-center">
                 <div class="col-lg-3">
-                    <img src="https://via.placeholder.com/150" alt="Partner 1" class="img-fluid">
+                    <img src="{{ url_for('static', filename='images/partner1.png') }}" alt="Partner 1" class="img-fluid">
                 </div>
                 <div class="col-lg-3">
-                    <img src="https://via.placeholder.com/150" alt="Partner 2" class="img-fluid">
+                    <img src="{{ url_for('static', filename='images/partner2.png') }}" alt="Partner 2" class="img-fluid">
                 </div>
                 <div class="col-lg-3">
-                    <img src="https://via.placeholder.com/150" alt="Partner 3" class="img-fluid">
+                    <img src="{{ url_for('static', filename='images/partner3.png') }}" alt="Partner 3" class="img-fluid">
                 </div>
                 <div class="col-lg-3">
-                    <img src="https://via.placeholder.com/150" alt="Partner 4" class="img-fluid">
+                    <img src="{{ url_for('static', filename='images/placeholder.png') }}" alt="Partner 4" class="img-fluid">
                 </div>
             </div>
         </div>
