@@ -1,6 +1,3 @@
-Certainly! Here is the entire README.md content formatted as a single code block for easy copying:
-
-```markdown
 ## Flight Delay Insurance Platform
 
 Welcome to the Flight Delay Insurance Platform! This platform allows you to purchase insurance for delayed flights using Ethereum and MetaMask.
@@ -10,14 +7,14 @@ Welcome to the Flight Delay Insurance Platform! This platform allows you to purc
 To run this web application locally, follow these steps:
 
 1. **Clone the repository:**
-   ```bash
+   ```
    git clone https://github.com/your/repository.git
    cd repository-name
    ```
 
 2. **Install dependencies:**
    Ensure you have Python and pip installed. Then, install the required Python packages using pip:
-   ```bash
+   ```
    pip install -r requirements.txt
    ```
 
@@ -28,7 +25,7 @@ To run this web application locally, follow these steps:
 
 4. **Configure environment variables:**
    Create a `.env` file in the root directory with the following variables:
-   ```plaintext
+   ```
    FLASK_APP=app.py
    FLASK_ENV=development
    SECRET_KEY=your_secret_key
@@ -36,8 +33,8 @@ To run this web application locally, follow these steps:
    ```
 
 5. **Run the Flask application:**
-   ```bash
-   flask run
+   ```
+   python app.py
    ```
 
 6. **Access the application:**
@@ -76,10 +73,3 @@ This project is licensed under the MIT License - see the `LICENSE` file for deta
 
 - Inspiration and initial structure from [OpenZeppelin](https://openzeppelin.com/).
 - Flight data provided by [FlightAware](https://flightaware.com/).
-
----
-
-Feel free to customize this `README.md` according to your specific project details and structure.
-```
-
-You can now copy and paste this entire block into your `README.md` file in your project repository. Adjust the placeholders (`your/repository.git`, `your_secret_key`, `your_infura_project_id`) with your actual project details before using it.
