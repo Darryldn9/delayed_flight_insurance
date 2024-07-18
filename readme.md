@@ -37,7 +37,7 @@ To run this web application locally, follow these steps:
 
 5. **Run the Flask application:**
    ```bash
-   flask run
+   python app.py
    ```
 
 6. **Access the application:**
