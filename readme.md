@@ -1,5 +1,3 @@
-Certainly! Here is the entire README.md content formatted as a single code block for easy copying:
-
 ```markdown
 ## Flight Delay Insurance Platform
 
